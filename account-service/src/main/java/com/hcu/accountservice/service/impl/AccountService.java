@@ -6,12 +6,14 @@ import com.hcu.accountservice.vo.AccountVO;
 import com.hcu.accountservice.vo.CreateAccountVO;
 import com.hcu.accountservice.vo.UpdateAccountVO;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
 public class AccountService implements IAccountService {
-
     private final IAccountDao accountDao;
 
     @Override
@@ -32,5 +34,10 @@ public class AccountService implements IAccountService {
     @Override
     public void delete(String id) {
         accountDao.delete(id);
+    }
+
+    @Override
+    public List<AccountVO> getAll(Pageable pageable) {
+        return accountDao.getAll(pageable);
     }
 }

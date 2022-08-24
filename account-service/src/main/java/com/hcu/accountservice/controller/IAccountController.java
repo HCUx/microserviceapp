@@ -1,9 +1,10 @@
 package com.hcu.accountservice.controller;
 
 import com.hcu.accountservice.common.ApiPath;
-import com.hcu.accountservice.vo.AccountVO;
 import com.hcu.accountservice.vo.CreateAccountVO;
 import com.hcu.accountservice.vo.UpdateAccountVO;
+import com.hcu.accountservice.vo.response.IResponseVO;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,14 +15,17 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 public interface IAccountController {
     @GetMapping(ApiPath.AccountCtrl.GET)
-    ResponseEntity<AccountVO> get(@PathVariable("id") String id);
+    ResponseEntity<IResponseVO> get(@PathVariable("id") String id);
 
     @PostMapping
-    ResponseEntity<AccountVO> save(@RequestBody CreateAccountVO createAccountVO);
+    ResponseEntity<IResponseVO> save(@RequestBody CreateAccountVO createAccountVO);
 
     @PutMapping
-    ResponseEntity<AccountVO> update(@RequestBody UpdateAccountVO updateAccountVO);
+    ResponseEntity<IResponseVO> update(@RequestBody UpdateAccountVO updateAccountVO);
 
     @DeleteMapping
     void delete(@PathVariable("id") String id);
+
+    @GetMapping
+    ResponseEntity<IResponseVO> getAll(Pageable pageable);
 }

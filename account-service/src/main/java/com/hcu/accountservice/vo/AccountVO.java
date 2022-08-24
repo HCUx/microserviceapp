@@ -5,6 +5,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.io.Serializable;
+import java.util.Date;
 
 @Getter
 @Setter
@@ -12,7 +13,13 @@ import java.io.Serializable;
 public class AccountVO implements Serializable {
     private String id;
 
-    private String userName;
+    private String username;
+
+    private String name;
+
+    private String surname;
+
+    private Date birthDay;
 
     private String email;
 }

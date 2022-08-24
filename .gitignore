@@ -33,3 +33,5 @@ build/
 .vscode/
 /eureka-server/target/
 /eureka-server/.mvn/
+/config-server/.mvn/
+/account-service/.mvn/

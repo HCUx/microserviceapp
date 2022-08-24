@@ -5,3 +5,17 @@ services:
     image: cassandra
     ports:
       - "9042:9042"
+  mysql:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: hcumysql
+  elasticsearch:
+    image: elasticsearch
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      discovery.type: single-node

@@ -38,3 +38,4 @@ build/
 /ticket-service/.mvn/
 /ticket-service/target/
 /service-common/.mvn/
+/hystrix-dashboard/.mvn/

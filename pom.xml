@@ -23,6 +23,19 @@
         <spring.cloud-version>2021.0.3</spring.cloud-version>
     </properties>
 
+    <developers>
+        <developer>
+            <id>hcux</id>
+            <name>Hamit Can Uzunay</name>
+            <email>canuzunay@gmail.com</email>
+            <roles>
+                <role>
+                    Software Engineer
+                </role>
+            </roles>
+        </developer>
+    </developers>
+
     <modules>
         <module>account-service</module>
         <module>service-parent</module>
@@ -32,6 +45,8 @@
         <module>ticket-service</module>
         <module>notification-service</module>
         <module>zipkin-server</module>
+        <module>hystrix-dashboard</module>
+        <module>gateway-server</module>
     </modules>
 
     <dependencyManagement>

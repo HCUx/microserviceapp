@@ -1,13 +1,13 @@
 package com.hcu.accountservice.controller.impl;
 
-import com.hcu.accountservice.common.ApiPath;
 import com.hcu.accountservice.constant.ResponseMessage;
 import com.hcu.accountservice.controller.BaseController;
 import com.hcu.accountservice.controller.IAccountController;
 import com.hcu.accountservice.service.impl.AccountService;
 import com.hcu.accountservice.vo.CreateAccountVO;
 import com.hcu.accountservice.vo.UpdateAccountVO;
-import com.hcu.accountservice.vo.response.IResponseVO;
+import com.hcu.common.ApiPath;
+import com.hcu.response.IResponseVO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;

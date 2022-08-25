@@ -11,7 +11,6 @@ import com.hcu.accountservice.vo.AccountVO;
 import com.hcu.accountservice.vo.CreateAccountVO;
 import com.hcu.accountservice.vo.UpdateAccountVO;
 import lombok.RequiredArgsConstructor;
-import org.modelmapper.Conditions;
 import org.modelmapper.ModelMapper;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -51,7 +50,7 @@ public class AccountDao implements IAccountDao {
     public AccountVO update(UpdateAccountVO updateAccountVO) {
         Account account = accountRepository.findById(updateAccountVO.getId())
                 .orElseThrow(() -> new AccountServiceException(ResponseMessage.NOT_FOUND));
-        modelMapper.getConfiguration().setPropertyCondition(Conditions.isNotNull());
+        //modelMapper.getConfiguration().setPropertyCondition(Conditions.isNotNull());
         modelMapper.map(updateAccountVO, account);
         account = accountRepository.save(account);
         return objectMapper.convertValue(account, AccountVO.class);

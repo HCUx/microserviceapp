@@ -37,3 +37,4 @@ build/
 /account-service/.mvn/
 /ticket-service/.mvn/
 /ticket-service/target/
+/service-common/.mvn/

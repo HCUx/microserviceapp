@@ -1,9 +1,10 @@
 package com.hcu.accountservice.controller;
 
-import com.hcu.accountservice.common.ApiPath;
+
 import com.hcu.accountservice.vo.CreateAccountVO;
 import com.hcu.accountservice.vo.UpdateAccountVO;
-import com.hcu.accountservice.vo.response.IResponseVO;
+import com.hcu.common.ApiPath;
+import com.hcu.response.IResponseVO;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;

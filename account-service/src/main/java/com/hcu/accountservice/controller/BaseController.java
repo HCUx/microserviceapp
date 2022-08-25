@@ -1,7 +1,7 @@
 package com.hcu.accountservice.controller;
 
-import com.hcu.accountservice.vo.response.IResponseVO;
-import com.hcu.accountservice.vo.response.ResponseVO;
+import com.hcu.response.IResponseVO;
+import com.hcu.response.ResponseVO;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 

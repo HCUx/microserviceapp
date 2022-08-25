@@ -15,6 +15,14 @@ spring:
         dialect: org.hibernate.dialect.MySQL5InnoDBDialect
     hibernate:
       ddl-auto: update
+  rabbitmq:
+    username: hcurabbit
+    password: hcurabbit
+  cloud:
+    stream:
+      bindings:
+        output:
+          destination: msqueue
 
 eureka:
   client:

@@ -1,11 +1,11 @@
 server:
-  port: 8503
+  port: ${SERVER_PORT:8503}
 
 spring:
   application:
     name: notification-service
   zipkin:
-    base-url: http://localhost:9411/
+    base-url: ${ZIPKIN_SERVER_URL:http://localhost:9411}
   rabbitmq:
     username: hcurabbit
     password: hcurabbit
@@ -18,9 +18,9 @@ spring:
 eureka:
   client:
     instance:
-      hostname: localhost
+      hostname: ${EUREKA_SERVER_HOST:localhost}
     serviceUrl:
-      defaultZone: http://localhost:8500/eureka/
+      defaultZone: ${EUREKA_SERVER_URL:http://localhost:8500/eureka/}
 
 management:
   endpoints:

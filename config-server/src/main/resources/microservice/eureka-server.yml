@@ -1,15 +1,15 @@
 server:
   port: 8500
-  boot:
-    admin:
-      client:
-        url: ${SPRING_BOOT_ADMIN_SERVER_URL:http://localhost:8508}
 
 spring:
   application:
     name: eureka-server
   zipkin:
     base-url: http://localhost:9411/
+  boot:
+    admin:
+      client:
+        url: ${SPRING_BOOT_ADMIN_SERVER_URL:http://localhost:8508}
 
 eureka:
   server:

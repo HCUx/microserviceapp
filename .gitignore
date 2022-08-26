@@ -1,4 +1,3 @@
-HELP.md
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
@@ -31,3 +30,11 @@ build/
 
 ### VS Code ###
 .vscode/
+/eureka-server/target/
+/eureka-server/.mvn/
+/config-server/.mvn/
+/account-service/.mvn/
+/ticket-service/.mvn/
+/ticket-service/target/
+/service-common/.mvn/
+/hystrix-dashboard/.mvn/

@@ -5,3 +5,25 @@ services:
     image: cassandra
     ports:
       - "9042:9042"
+  mysql:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: mservicepwd
+    ports:
+      - '3306:3306'
+  elasticsearch:
+    image: elasticsearch:7.17.5
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    environment:
+      discovery.type: single-node
+  msrabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - '5672:5672'
+      - '15672:15672'
+    environment:
+      - RABBITMQ_DEFAULT_USER=hcurabbit
+      - RABBITMQ_DEFAULT_PASS=hcurabbit

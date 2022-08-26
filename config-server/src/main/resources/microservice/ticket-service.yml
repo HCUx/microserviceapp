@@ -19,12 +19,15 @@ spring:
       ddl-auto: update
   rabbitmq:
     username: ${RABBITMQ_USERNAME:hcurabbit}
-    password: ${RABBITMQ_USERNAME:hcurabbit}
+    password: ${RABBITMQ_PASSWORD:hcurabbit}
+    host: ${RABBITMQ_HOST:localhost}
   cloud:
     stream:
       bindings:
         output:
           destination: msqueue
+  elasticsearch:
+    uris: ${ELASTICSEARCH_URL:localhost:9200}
 
 eureka:
   client:
